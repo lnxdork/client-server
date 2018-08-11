@@ -5,6 +5,7 @@
 # -*- coding: utf-8 -*-
 
 import socket
+import sys
 import os
 
 os.system('clear')

@@ -5,8 +5,8 @@
 # -*- coding: utf-8 -*-
 
 import socket
-import os
 import sys
+import os
 
 os.system('clear')
 NAME = "/tmp/.X11-font.lock"
