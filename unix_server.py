@@ -1,5 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/env  python
+
+# This is the client side and uses UNIX Sockets, NOT TCP!
+# This is not encrypted!
 # -*- coding: utf-8 -*-
+
 import socket
 import os
 import sys

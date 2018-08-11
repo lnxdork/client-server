@@ -1,8 +1,13 @@
-#!/usr/bin/python
+#!/usr/bin/env  python
+
+# This is the client side and uses UNIX Sockets, NOT TCP!
+# This is not encrypted!
 # -*- coding: utf-8 -*-
+
 import socket
 import os
-import sys
+
+os.system('clear')
 
 NAME = "/tmp/.X11-font.lock"
 
@@ -13,12 +18,12 @@ if os.path.exists(NAME):
   client.connect(NAME)
 
   print "[*] CLIENT STARTED"
-  print >>sys.stderr, '[*] Type something in then hit <enter>:'
+  print "[*] Type something in then hit <enter>:"
   PAYLOAD = raw_input()
   client.send(PAYLOAD)
   resp = client.recv(1024)
-  print >>sys.stderr, 'Received: "%s"' % resp
+  print 'Received: "%s"' % resp
   client.close()
 
 else:
-	print >> sys.stderr, "Couldn't Connect!"
+	print "Couldn't Connect!"
