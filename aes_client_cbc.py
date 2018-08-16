@@ -35,6 +35,10 @@ if __name__ == '__main__':
     target_host = "localhost"
     target_port = 9999
 
+    if len(sys.argv) >= 2:
+        target_host = sys.argv[1]
+        target_port = int(sys.argv[2])
+        
     # create a socket object
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 

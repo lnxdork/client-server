@@ -37,6 +37,10 @@ if __name__ == '__main__':
     bind_ip = "0.0.0.0"
     bind_port = 9999
     
+    if len(sys.argv) >= 2:
+        bind_ip = sys.argv[1]
+        bind_port = int(sys.argv[2])
+
     # create a socket object
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.bind((bind_ip,bind_port))
